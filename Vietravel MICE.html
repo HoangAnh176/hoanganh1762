@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head lang="vi">
+    <link href="https://vietravelmice.com:443/favicon.ico?v=04102018" rel="icon" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="DC.language" scheme="UTF-8" content="vi" />
+    <meta property="og:title" content="Vietravel MICE" />
+    <meta property="og:url" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" />
+    <meta property="og:image" />
+    <meta name="description" content="Vietravel MICE" />
+    <meta name="keywords" content="Vietravel MICE" />
+    <title>Vietravel MICE</title>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/css/bootstrap.min.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/fonts/css/fontawesome-all.css?v=04102018" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/css/style.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/css/icon.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/css/hover.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/css/responsive.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/mice2018/sweetalert/sweetalert-min.css?v=04102018" />
+    <link rel="stylesheet" href="https://vietravelmice.com:443/Content/call.css?v=04102018" /> 
+    <style>
+        html.loading {
+            background: #333 url("https://vietravelmice.com:443/Content/images/ajax-load.gif") no-repeat 50% 50%;
+            -webkit-transition: background-color 0;
+            transition: background-color 0;
+        }
+
+            html.loading body {
+                opacity: 0.5;
+                -webkit-transition: opacity 0;
+                transition: opacity 0;
+            }
+
+        .loading {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            opacity: 0.5;
+            background: url("https://vietravelmice.com:443/Content/images/ajax-load.gif") 50% 50% no-repeat rgb(249,249,249);
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FFPDRP');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FFPDRP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div style="display: none;">
+        <h1>Vietravel Mice</h1>
+    </div>
+
+    
+
+
+<div id="m-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+                <div class="m-logo">
+                    <a href="https://vietravelmice.com:443"><img src="https://vietravelmice.com:443/Content/mice2018/img/logo.png" alt="" class="img-responsive" /></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                <div>
+                    <!-- update 30/07/2018 đưa vị trí div có class m-h-languge lên trước m-h-search  -->
+                    <div class="m-h-languge">
+                            <a style="display:none" href="javascript:void(0)" onclick="changeLanguage('EN');">
+                                <img src="https://vietravelmice.com:443/Content/mice2018/img/en.png" alt="" class="img-responsive img-lang" />
+                                <span class="txt-lang">EN</span>
+                            </a>
+                    </div>
+                    <div class="m-h-search">
+                        <input id="SearchDesktop" type="text" class="form-control input-md" placeholder="Nhập thông tin cần tìm" />
+                        <a onclick="Search()" style="cursor:pointer"><i class="fas fa-search m-pos"></i></a>
+                    </div>
+                    <!-- update 30/07/2018 đưa vị trí div có class m-h-languge lên trước m-h-search  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="clear"></div>
+
+    
+
+<div id="m-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="row">
+                    <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-right">
+                        <div class="i-menu-mini"><i class="fas fa-bars fa-lg"></i></div>
+                    </div>
+                </div>
+                <nav class="menu menu-mini">
+                    <ul class="clearfix">
+                        <li class="hidden-sm hidden-xs current-item"><a href="https://vietravelmice.com:443"><i class="fas fa-home"></i></a></li>
+                        <li class="hidden-lg hidden-md"><a href="https://vietravelmice.com:443">Trang chủ</a></li>
+
+                                    <li class="hidden-sm hidden-xs">
+
+                                        
+                                        <a href="javascripts:void(0)">Giới thiệu  &nbsp;&nbsp;<span class="arrow"><i class="fas fa-angle-down"></i></span></a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://vietravelmice.com:443/gioi-thieu">Giới thiệu chung</a></li>
+                                                <li><a href="https://vietravelmice.com:443/tin-tuc/78-tai-sao-chon-vietravel-mice">L&#253; do n&#234;n chọn Vietravel Mice</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden-sm hidden-xs">
+
+                                        
+                                        <a href="javascripts:void(0)">TOUR TRỌN G&#211;I&nbsp;&nbsp;<span class="arrow"><i class="fas fa-angle-down"></i></span></a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/2-du-lich-bien">Du Lịch Biển</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/9-du-lich-cao-cap">Du Lịch Cao Cấp</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/3-du-lich-hanh-huong">Du Lịch H&#224;nh Hương</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/10-du-lich-kham-pha">Du Lịch Kh&#225;m Ph&#225;</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/4-du-lich-su-kien">Du Lịch Sự Kiện</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/8-du-lich-theo-mua-hoa">Du Lịch Theo M&#249;a Hoa</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/6-du-lich-tham-than">Du Lịch Thăm Th&#226;n</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/13-du-lich-xuyen-viet">Du lịch Xuy&#234;n Việt</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/19-du-thuyen">Du Thuyền</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/18-san-pham-thu-dong">Sản Phẩm Thu Đ&#244;ng</a></li>
+                                                <li><a href="https://vietravelmice.com:443/nhom-tour/12-tour-danh-rieng-cho-hs--sv">Tour d&#224;nh ri&#234;ng cho HS - SV</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden-sm hidden-xs">
+
+                                        
+                                        <a href="javascripts:void(0)">DỊCH VỤ DU LỊCH&nbsp;&nbsp;<span class="arrow"><i class="fas fa-angle-down"></i></span></a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://vietravelmice.com:443/trang-tin/7-coupon">Coupon</a></li>
+                                                <li><a href="https://worldtrans.vn/">V&#233; m&#225;y bay</a></li>
+                                                <li><a href="https://car4rent.com/">Thu&#234; xe</a></li>
+                                                <li><a href="https://vietravelmice.com:443/trang-tin/8-dich-vu-visa">Dịch vụ Visa</a></li>
+                                                <li><a href="https://vietravelmice.com:443/trang-tin/9-goi-dich-vu--combo">G&#243;i dịch vụ - Combo</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden-sm hidden-xs">
+
+                                        
+                                        <a href="javascripts:void(0)">ĐIỂM ĐẾN HẤP DẪN&nbsp;&nbsp;<span class="arrow"><i class="fas fa-angle-down"></i></span></a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://vietravelmice.com:443/loai-tin/2-le-hoi">Lễ hội</a></li>
+                                                <li><a href="https://vietravelmice.com:443/loai-tin/2-diem-den-hap-dan">Trải nghiệm theo m&#249;a</a></li>
+                                                <li><a href="https://vietravelmice.com:443/loai-media/1-diem-den-hap-dan">Media</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden-sm hidden-xs">
+
+                                        
+                                        <a href="https://vietravelmice.com:443/menu-tin/1-tin-tuc ">Tin tức&nbsp;&nbsp;<span class="arrow"><i class="fas fa-angle-down"></i></span></a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://vietravelmice.com:443/loai-tin/1-su-kien-noi-bat">Nhật k&#253; h&#224;nh tr&#236;nh</a></li>
+                                                <li><a href="https://vietravelmice.com:443/loai-tin/4-tin-tuc">Sự kiện</a></li>
+                                                <li><a href="https://vietravelmice.com:443/loai-tin/13-khuyen-mai">Khuyến m&#227;i</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden-sm hidden-xs"><a href="https://vietravelmice.com:443/loai-tin/11-y-kien-khach-hang">&#221; KIẾN KH&#193;CH H&#192;NG</a></li>
+                                    <li class="hidden-sm hidden-xs"><a href="https://vietravelmice.com:443/lien-he">Li&#234;n hệ</a></li>
+                        
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/gioi-thieu">Giới thiệu chung</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/tin-tuc/78-tai-sao-chon-vietravel-mice">L&#253; do n&#234;n chọn Vietravel Mice</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/2-du-lich-bien">Du Lịch Biển</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/9-du-lich-cao-cap">Du Lịch Cao Cấp</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/3-du-lich-hanh-huong">Du Lịch H&#224;nh Hương</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/10-du-lich-kham-pha">Du Lịch Kh&#225;m Ph&#225;</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/4-du-lich-su-kien">Du Lịch Sự Kiện</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/8-du-lich-theo-mua-hoa">Du Lịch Theo M&#249;a Hoa</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/6-du-lich-tham-than">Du Lịch Thăm Th&#226;n</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/13-du-lich-xuyen-viet">Du lịch Xuy&#234;n Việt</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/19-du-thuyen">Du Thuyền</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/18-san-pham-thu-dong">Sản Phẩm Thu Đ&#244;ng</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/nhom-tour/12-tour-danh-rieng-cho-hs--sv">Tour d&#224;nh ri&#234;ng cho HS - SV</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/trang-tin/7-coupon">Coupon</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://worldtrans.vn/">V&#233; m&#225;y bay</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://car4rent.com/">Thu&#234; xe</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/trang-tin/8-dich-vu-visa">Dịch vụ Visa</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/trang-tin/9-goi-dich-vu--combo">G&#243;i dịch vụ - Combo</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-tin/2-le-hoi">Lễ hội</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-tin/2-diem-den-hap-dan">Trải nghiệm theo m&#249;a</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-media/1-diem-den-hap-dan">Media</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-tin/1-su-kien-noi-bat">Nhật k&#253; h&#224;nh tr&#236;nh</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-tin/4-tin-tuc">Sự kiện</a>
+                                        </li>
+                                        <li class="hidden-lg hidden-md">
+                                            <a href="https://vietravelmice.com:443/loai-tin/13-khuyen-mai">Khuyến m&#227;i</a>
+                                        </li>
+                                    <li class="hidden-lg hidden-md"><a href="https://vietravelmice.com:443/loai-tin/11-y-kien-khach-hang">&#221; KIẾN KH&#193;CH H&#192;NG</a></li>
+                                    <li class="hidden-lg hidden-md"><a href="https://vietravelmice.com:443/lien-he">Li&#234;n hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+
+
+<div class="clear"></div>
+
+
+
+
+    <!-- update 30/07/2018 cập nhật slideshow theo yêu cầu -->
+    <div id="m-kinhnghiem" class="hidden-xs-slide">
+        <div id="experience" class="carousel slide pos-relative" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                    <div style="cursor:pointer" class="item active " onclick="window.location.href = 'https://vietravelmice.com/tin-tuc/501-vietravel-lan-thu-3-lien-tiep-dan-dau-cac-hang-muc-nha-to-chuc-du-lich-mice-tot-nhat-the-gioi-tai-le-trao-giai-world-mice-awards-2024';">
+                        <!-- kích thước video 1920x748 -->
+                        <img style="width:100%; " height="270" class="img-slide" src="https://vietravelmice.com/FileUploads/Banners/img_130920245e01eba5-5ed8-4575-b21b-27f9720e1ac6.jpg" alt="" class="img-responsive img-kndl">
+                        <div class="frame-experience hide">
+                            <h3 class="mg-bot15"><span class="m-color uppercase bold">World MICE Awards 2024</span> - </h3>
+                            <div class="frame-experience-descript dot-dot home-cut-descipt">
+                                
+                            </div>
+                            <a href="https://vietravelmice.com/tin-tuc/501-vietravel-lan-thu-3-lien-tiep-dan-dau-cac-hang-muc-nha-to-chuc-du-lich-mice-tot-nhat-the-gioi-tai-le-trao-giai-world-mice-awards-2024" class="m-color">Xem chi tiết&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div style="cursor:pointer" class="item  " onclick="window.location.href = '';">
+                        <!-- kích thước video 1920x748 -->
+                        <img style="width:100%; " height="270" class="img-slide" src="https://vietravelmice.com/FileUploads/Banners/img_16082024fbbafba5-d222-48d6-9b00-acbd3b7cab73.jpg" alt="" class="img-responsive img-kndl">
+                        <div class="frame-experience hide">
+                            <h3 class="mg-bot15"><span class="m-color uppercase bold">Du lịch kh&#225;ch đo&#224;n - company trip m&#249;a thu 2024</span> - Khuyến m&#227;i m&#249;a thu đ&#244;ng du lịch kh&#225;ch đo&#224;n</h3>
+                            <div class="frame-experience-descript dot-dot home-cut-descipt">
+                                
+                            </div>
+                            <a href="" class="m-color">Xem chi tiết&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#experience" data-slide="prev">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#experience" data-slide="next">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!-- update 30/07/2018 cập nhật slideshow theo yêu cầu -->
+
+
+<div class="clear"></div>
+
+
+
+
+<div id="m-sukiennoibat">
+    <div class="container">
+        <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h2 class="title"><a href="https://vietravelmice.com:443/loai-tin/1-nhat-ky-hanh-trinh">Nhật k&#253; h&#224;nh tr&#236;nh</a></h2>
+                </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center mg-bot30">
+                        <a title="D&#224;nh m&#249;a h&#232; n&#224;y để trải nghiệm Đ&#224;i Loan vui hết sảy" href="https://vietravelmice.com:443/tin-tuc/495-danh-mua-he-nay-de-trai-nghiem-dai-loan-vui-het-say" class="hvr-sweep-to-bottom">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_24072024521a28f5-af64-49db-9790-33135b469be5.jpg" alt="D&#224;nh m&#249;a h&#232; n&#224;y để trải nghiệm Đ&#224;i Loan vui hết sảy" class="img-responsive img-sknb" />
+                        </a>
+                        <h3 title="D&#224;nh m&#249;a h&#232; n&#224;y để trải nghiệm Đ&#224;i Loan vui hết sảy" class="dot-dot home-cut-title-news"><a href="https://vietravelmice.com:443/tin-tuc/495-danh-mua-he-nay-de-trai-nghiem-dai-loan-vui-het-say">D&#224;nh m&#249;a h&#232; n&#224;y để trải nghiệm Đ&#224;i Loan vui hết sảy</a></h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center mg-bot30">
+                        <a title="Mỹ đốn tim du kh&#225;ch ngay lần đầu đặt ch&#226;n đến" href="https://vietravelmice.com:443/tin-tuc/494-my-don-tim-du-khach-ngay-lan-dau-dat-chan-den" class="hvr-sweep-to-bottom">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_120720245af6c3f7-9559-4284-92c1-aaec44dbc003.jpg" alt="Mỹ đốn tim du kh&#225;ch ngay lần đầu đặt ch&#226;n đến" class="img-responsive img-sknb" />
+                        </a>
+                        <h3 title="Mỹ đốn tim du kh&#225;ch ngay lần đầu đặt ch&#226;n đến" class="dot-dot home-cut-title-news"><a href="https://vietravelmice.com:443/tin-tuc/494-my-don-tim-du-khach-ngay-lan-dau-dat-chan-den">Mỹ đốn tim du kh&#225;ch ngay lần đầu đặt ch&#226;n đến</a></h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center mg-bot30">
+                        <a title="H&#232; rực rỡ với tour du lịch đ&#225;ng mong chờ d&#224;nh cho doanh nghiệp" href="https://vietravelmice.com:443/tin-tuc/493-he-ruc-ro-voi-tour-du-lich-dang-mong-cho-danh-cho-doanh-nghiep" class="hvr-sweep-to-bottom">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_05072024b2b23e02-dc9a-4328-8338-2a35d1a00e38.jpg" alt="H&#232; rực rỡ với tour du lịch đ&#225;ng mong chờ d&#224;nh cho doanh nghiệp" class="img-responsive img-sknb" />
+                        </a>
+                        <h3 title="H&#232; rực rỡ với tour du lịch đ&#225;ng mong chờ d&#224;nh cho doanh nghiệp" class="dot-dot home-cut-title-news"><a href="https://vietravelmice.com:443/tin-tuc/493-he-ruc-ro-voi-tour-du-lich-dang-mong-cho-danh-cho-doanh-nghiep">H&#232; rực rỡ với tour du lịch đ&#225;ng mong chờ d&#224;nh cho doanh nghiệp</a></h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center mg-bot30">
+                        <a title="Những điểm đến cực hấp dẫn c&#249;ng Tour du lịch doanh nghiệp đến Mỹ" href="https://vietravelmice.com:443/tin-tuc/492-nhung-diem-den-cuc-hap-dan-cung-tour-du-lich-doanh-nghiep-den-my" class="hvr-sweep-to-bottom">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_2106202484bdce79-a0da-4767-903c-0775e63fff77.jpg" alt="Những điểm đến cực hấp dẫn c&#249;ng Tour du lịch doanh nghiệp đến Mỹ" class="img-responsive img-sknb" />
+                        </a>
+                        <h3 title="Những điểm đến cực hấp dẫn c&#249;ng Tour du lịch doanh nghiệp đến Mỹ" class="dot-dot home-cut-title-news"><a href="https://vietravelmice.com:443/tin-tuc/492-nhung-diem-den-cuc-hap-dan-cung-tour-du-lich-doanh-nghiep-den-my">Những điểm đến cực hấp dẫn c&#249;ng Tour du lịch doanh nghiệp đến Mỹ</a></h3>
+                    </div>
+
+                <div class="col-lg-6 sub-news mg-bot15">
+                    <h2 class="title"><a href="https://vietravelmice.com:443/loai-tin/3-su-kien">Sự kiện</a></h2>
+                    <div class="sub-news-line">
+
+                            <div class="item-sub-news">
+                                <h2 class="dot-dot home-cut-sub-news">
+                                    <a title="Vietravel tư vấn trực tiếp tổ chức tour du lịch h&#232; cho c&#225;c doanh nghiệp tại Hội thảo Cafe Doanh nh&#226;n Huba Lần thứ 77" href="https://vietravelmice.com:443/tin-tuc/489-vietravel-tu-van-truc-tiep-to-chuc-tour-du-lich-he-cho-cac-doanh-nghiep-tai-hoi-thao-cafe-doanh-nhan-huba-lan-thu-77">
+                                        Vietravel tư vấn trực tiếp tổ chức tour du lịch h&#232; cho c&#225;c doanh nghiệp tại Hội thảo Cafe Doanh nh&#226;n Huba Lần thứ 77
+                                    </a>
+                                </h2>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;11/06/2024
+                                </div>
+                            </div>
+                                <hr />
+                            <div class="item-sub-news">
+                                <h2 class="dot-dot home-cut-sub-news">
+                                    <a title="​VIETRAVEL TỔ CHỨC KỲ THI XẾP HẠNG SAO NH&#194;N VI&#202;N KINH DOANH KH&#193;CH ĐO&#192;N 2023" href="https://vietravelmice.com:443/tin-tuc/435-​vietravel-to-chuc-ky-thi-xep-hang-sao-nhan-vien-kinh-doanh-khach-doan-2023">
+                                        ​VIETRAVEL TỔ CHỨC KỲ THI XẾP HẠNG SAO NH&#194;N VI&#202;N KINH DOANH KH&#193;CH ĐO&#192;N 2023
+                                    </a>
+                                </h2>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;24/11/2023
+                                </div>
+                            </div>
+                                <hr />
+                            <div class="item-sub-news">
+                                <h2 class="dot-dot home-cut-sub-news">
+                                    <a title="VIETRAVEL TỔ CHỨC ĐO&#192;N ĐẾN TH&#193;I LAN “TIẾP LỬA” ĐỘI TUYỂN U23 VIỆT NAM TẠI AFF CUP 2023 " href="https://vietravelmice.com:443/tin-tuc/426-vietravel-to-chuc-doan-den-thai-lan-“tiep-lua”-doi-tuyen-u23-viet-nam-tai-aff-cup-2023-">
+                                        VIETRAVEL TỔ CHỨC ĐO&#192;N ĐẾN TH&#193;I LAN “TIẾP LỬA” ĐỘI TUYỂN U23 VIỆT NAM TẠI AFF CUP 2023 
+                                    </a>
+                                </h2>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;23/08/2023
+                                </div>
+                            </div>
+                                <hr />
+                            <div class="item-sub-news">
+                                <h2 class="dot-dot home-cut-sub-news">
+                                    <a title="VIETRAVEL MICE THAM DỰ HỘI THẢO CAFE DOANH NH&#194;N HUBA LẦN THỨ 70 " href="https://vietravelmice.com:443/tin-tuc/418-vietravel-mice-tham-du-hoi-thao-cafe-doanh-nhan-huba-lan-thu-70-">
+                                        VIETRAVEL MICE THAM DỰ HỘI THẢO CAFE DOANH NH&#194;N HUBA LẦN THỨ 70 
+                                    </a>
+                                </h2>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;21/06/2023
+                                </div>
+                            </div>
+                                <hr />
+                            <div class="item-sub-news">
+                                <h2 class="dot-dot home-cut-sub-news">
+                                    <a title="VIETRAVEL THAM GIA QUẢNG B&#193; DU LỊCH VIỆT NAM - TP.HCM TẠI CAMPUCHIA, TH&#193;I LAN" href="https://vietravelmice.com:443/tin-tuc/417-vietravel-tham-gia-quang-ba-du-lich-viet-nam--tphcm-tai-campuchia-thai-lan">
+                                        VIETRAVEL THAM GIA QUẢNG B&#193; DU LỊCH VIỆT NAM - TP.HCM TẠI CAMPUCHIA, TH&#193;I LAN
+                                    </a>
+                                </h2>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;21/06/2023
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 sub-event mg-bot15">
+                    <h2 class="title"><a href="https://vietravelmice.com:443/loai-tin/2-diem-den-hap-dan">ĐIỂM ĐẾN HẤP DẪN</a></h2>
+                    <div class="sub-event-line">
+                        <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12 mg-bot30">
+                                    <!-- update 30/07/2018 -->
+                                    <a title="Bay thẳng Đ&#224;i Loan - Tour trọn g&#243;i chỉ từ 12,9 triệu đồng" href="https://vietravelmice.com:443/tin-tuc/499-bay-thang-dai-loan--tour-tron-goi-chi-tu-129-trieu-dong">
+                                        <div style="position: relative;">
+                                            <img src="https://vietravelmice.com/FileUploads/Tin/img_250720240176996c-28a1-47dc-9158-0791d06bb62d.jpg" alt="Bay thẳng Đ&#224;i Loan - Tour trọn g&#243;i chỉ từ 12,9 triệu đồng" class="img-responsive img-sn">
+                                            <div class="sub-event-f">
+                                                <h3 class="dot-dot home-cut-title-news">Bay thẳng Đ&#224;i Loan - Tour trọn g&#243;i chỉ từ 12,9 triệu đồng</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- update 30/07/2018 -->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12 mg-bot30">
+                                    <!-- update 30/07/2018 -->
+                                    <a title="Tour Triển l&#227;m &amp; Hội nghị Gastech Houston 2024" href="https://vietravelmice.com:443/tin-tuc/491-tour-trien-lam--hoi-nghi-gastech-houston-2024">
+                                        <div style="position: relative;">
+                                            <img src="https://vietravelmice.com/FileUploads/Tin/img_21062024fb7d0cfb-40cc-4842-bb53-7edb3ff2abed.jpg" alt="Tour Triển l&#227;m &amp; Hội nghị Gastech Houston 2024" class="img-responsive img-sn">
+                                            <div class="sub-event-f">
+                                                <h3 class="dot-dot home-cut-title-news">Tour Triển l&#227;m &amp; Hội nghị Gastech Houston 2024</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- update 30/07/2018 -->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12 mg-bot30">
+                                    <!-- update 30/07/2018 -->
+                                    <a title="Du ngoạn ch&#226;u &#194;u thật dễ d&#224;ng với đường bay thẳng đến Munich" href="https://vietravelmice.com:443/tin-tuc/490-du-ngoan-chau-au-that-de-dang-voi-duong-bay-thang-den-munich">
+                                        <div style="position: relative;">
+                                            <img src="https://vietravelmice.com/FileUploads/Tin/img_130620246cd77003-be16-4e72-b1fa-7578774948fd.jpg" alt="Du ngoạn ch&#226;u &#194;u thật dễ d&#224;ng với đường bay thẳng đến Munich" class="img-responsive img-sn">
+                                            <div class="sub-event-f">
+                                                <h3 class="dot-dot home-cut-title-news">Du ngoạn ch&#226;u &#194;u thật dễ d&#224;ng với đường bay thẳng đến Munich</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- update 30/07/2018 -->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12 mg-bot30">
+                                    <!-- update 30/07/2018 -->
+                                    <a title="Tour hội chợ Canton Fair Quảng Ch&#226;u Lần thứ 135 - năm 2024" href="https://vietravelmice.com:443/tin-tuc/484-tour-hoi-cho-canton-fair-quang-chau-lan-thu-135--nam-2024">
+                                        <div style="position: relative;">
+                                            <img src="https://vietravelmice.com/FileUploads/Tin/img_120420248d239b40-6506-4c65-bdc1-afe7dfe06757.jpeg" alt="Tour hội chợ Canton Fair Quảng Ch&#226;u Lần thứ 135 - năm 2024" class="img-responsive img-sn">
+                                            <div class="sub-event-f">
+                                                <h3 class="dot-dot home-cut-title-news">Tour hội chợ Canton Fair Quảng Ch&#226;u Lần thứ 135 - năm 2024</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- update 30/07/2018 -->
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clear"></div>
+
+
+    <div id="m-tintuc">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h2 class="title"><a href="https://vietravelmice.com:443/loai-tin/4-tin-tuc">Tin tức</a></h2>
+                </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mg-bot30">
+                        <a title="Vietravel lần thứ 3 li&#234;n tiếp dẫn đầu c&#225;c hạng mục Nh&#224; tổ chức du lịch MICE tốt nhất thế giới tại Lễ trao giải World MICE Awards 2024" href="https://vietravelmice.com:443/tin-tuc/501-vietravel-lan-thu-3-lien-tiep-dan-dau-cac-hang-muc-nha-to-chuc-du-lich-mice-tot-nhat-the-gioi-tai-le-trao-giai-world-mice-awards-2024" class="hvr-curl-top-left">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_10092024d2357ab0-9e98-4fea-8045-e5e0a22df372.jpg" alt="Vietravel lần thứ 3 li&#234;n tiếp dẫn đầu c&#225;c hạng mục Nh&#224; tổ chức du lịch MICE tốt nhất thế giới tại Lễ trao giải World MICE Awards 2024" class="img-responsive img-tt" />
+                        </a>
+                        <h3 class="dot-dot home-cut-title-news"><a title="Vietravel lần thứ 3 li&#234;n tiếp dẫn đầu c&#225;c hạng mục Nh&#224; tổ chức du lịch MICE tốt nhất thế giới tại Lễ trao giải World MICE Awards 2024" href="https://vietravelmice.com:443/tin-tuc/501-vietravel-lan-thu-3-lien-tiep-dan-dau-cac-hang-muc-nha-to-chuc-du-lich-mice-tot-nhat-the-gioi-tai-le-trao-giai-world-mice-awards-2024">Vietravel lần thứ 3 li&#234;n tiếp dẫn đầu c&#225;c hạng mục Nh&#224; tổ chức du lịch MICE tốt nhất thế giới tại Lễ trao giải World MICE Awards 2024</a></h3>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-5">
+                                <i class="far fa-calendar-alt"></i>&nbsp;10/09/2024
+                            </div>
+                            <div class="col-sm-7 col-xs-7 text-right">
+                                <span class="bold m-color">42922</span>&nbsp;lượt xem&nbsp;&nbsp;|&nbsp;&nbsp;<i style="cursor:pointer" onclick="Like(501)" class="far fa-thumbs-up"></i>&nbsp;<span id="New_Like_501" style="cursor:pointer" onclick="Like(501)" class="bold m-color">483</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mg-bot30">
+                        <a title="Chủ tịch Tập đo&#224;n Vietravel tham dự toạ đ&#224;m &quot;X&#226;y dựng thương hiệu Việt ph&#225;t triển, vươn ra thế giới&quot;" href="https://vietravelmice.com:443/tin-tuc/500-chu-tich-tap-doan-vietravel-tham-du-toa-dam-xay-dung-thuong-hieu-viet-phat-trien-vuon-ra-the-gioi" class="hvr-curl-top-left">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_19082024927229df-125b-41f7-8b40-9a57b4a82980.jpg" alt="Chủ tịch Tập đo&#224;n Vietravel tham dự toạ đ&#224;m &quot;X&#226;y dựng thương hiệu Việt ph&#225;t triển, vươn ra thế giới&quot;" class="img-responsive img-tt" />
+                        </a>
+                        <h3 class="dot-dot home-cut-title-news"><a title="Chủ tịch Tập đo&#224;n Vietravel tham dự toạ đ&#224;m &quot;X&#226;y dựng thương hiệu Việt ph&#225;t triển, vươn ra thế giới&quot;" href="https://vietravelmice.com:443/tin-tuc/500-chu-tich-tap-doan-vietravel-tham-du-toa-dam-xay-dung-thuong-hieu-viet-phat-trien-vuon-ra-the-gioi">Chủ tịch Tập đo&#224;n Vietravel tham dự toạ đ&#224;m &quot;X&#226;y dựng thương hiệu Việt ph&#225;t triển, vươn ra thế giới&quot;</a></h3>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-5">
+                                <i class="far fa-calendar-alt"></i>&nbsp;19/08/2024
+                            </div>
+                            <div class="col-sm-7 col-xs-7 text-right">
+                                <span class="bold m-color">299</span>&nbsp;lượt xem&nbsp;&nbsp;|&nbsp;&nbsp;<i style="cursor:pointer" onclick="Like(500)" class="far fa-thumbs-up"></i>&nbsp;<span id="New_Like_500" style="cursor:pointer" onclick="Like(500)" class="bold m-color">8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mg-bot30">
+                        <a title="Vietravel c&#244;ng bố v&#224; trao chứng nhận Hạng sao Nh&#226;n vi&#234;n Kinh doanh Kh&#225;ch đo&#224;n 2023 " href="https://vietravelmice.com:443/tin-tuc/488-vietravel-cong-bo-va-trao-chung-nhan-hang-sao-nhan-vien-kinh-doanh-khach-doan-2023-" class="hvr-curl-top-left">
+                            <img src="https://vietravelmice.com/FileUploads/Tin/img_05062024456ca984-2a5d-47be-9443-1cc053f135cb.jpeg" alt="Vietravel c&#244;ng bố v&#224; trao chứng nhận Hạng sao Nh&#226;n vi&#234;n Kinh doanh Kh&#225;ch đo&#224;n 2023 " class="img-responsive img-tt" />
+                        </a>
+                        <h3 class="dot-dot home-cut-title-news"><a title="Vietravel c&#244;ng bố v&#224; trao chứng nhận Hạng sao Nh&#226;n vi&#234;n Kinh doanh Kh&#225;ch đo&#224;n 2023 " href="https://vietravelmice.com:443/tin-tuc/488-vietravel-cong-bo-va-trao-chung-nhan-hang-sao-nhan-vien-kinh-doanh-khach-doan-2023-">Vietravel c&#244;ng bố v&#224; trao chứng nhận Hạng sao Nh&#226;n vi&#234;n Kinh doanh Kh&#225;ch đo&#224;n 2023 </a></h3>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-5">
+                                <i class="far fa-calendar-alt"></i>&nbsp;05/06/2024
+                            </div>
+                            <div class="col-sm-7 col-xs-7 text-right">
+                                <span class="bold m-color">20245</span>&nbsp;lượt xem&nbsp;&nbsp;|&nbsp;&nbsp;<i style="cursor:pointer" onclick="Like(488)" class="far fa-thumbs-up"></i>&nbsp;<span id="New_Like_488" style="cursor:pointer" onclick="Like(488)" class="bold m-color">428</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="clear"></div>
+
+<div id="video"></div>
+
+
+
+
+    <div id="m-khachhangnoi">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center mg-bot30">
+                    <div id="customer-review" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                                <li data-target="#customer-review" data-slide-to="0" class="active"></li>
+                                <li data-target="#customer-review" data-slide-to="1" class=""></li>
+                                <li data-target="#customer-review" data-slide-to="2" class=""></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="frame-customer">
+                                        <div class="text-center">
+                                            <p class="customer-name m-color"><a href="https://vietravelmice.com:443/tin-tuc/246-thu-cam-on-cua-doan-cong-ty-tnhh-tmdv-hoang-lan-trong-chuyen-di-phan-thiet-120-khach">THƯ C&#193;M ƠN CỦA ĐO&#192;N C&#212;NG TY TNHH TM&amp;DV HO&#192;NG LAN TRONG CHUYẾN ĐI PHAN THIẾT 120 KH&#193;CH.</a></p>
+                                            <p class="mg-bot15"><span>------------------ # ------------------</span></p>
+                                            <p class="customer-comment">
+                                                <span class="comma">"</span>                                                
+                                                Tận t&#226;m gi&#250;p đỡ đo&#224;n từng ly từng t&#253;, vui vẻ v&#224; rất thi&#234;n thiện tr&#234;n suốt chuyến đi n&#224;y, kh&#244;ng biết n&#243;i g&#236; hơn, c&#225;m ơn c&#225;c em rất nhiều đ&#227; gi&#250;p đỡ đo&#224;n c&#243; được chuyến đi tuyệt vời n&#224;y.
+                                                <span class="comma">"</span>
+                                            </p>
+                                            <p><span>------------------ # ------------------</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item ">
+                                    <div class="frame-customer">
+                                        <div class="text-center">
+                                            <p class="customer-name m-color"><a href="https://vietravelmice.com:443/tin-tuc/257-thu-cam-on-cua-cong-ty-co-phan-bao-bi-nhua-tan-tien">THƯ C&#193;M ƠN CỦA C&#212;NG TY CỔ PHẦN BAO B&#204; NHỰA T&#194;N TIẾN</a></p>
+                                            <p class="mg-bot15"><span>------------------ # ------------------</span></p>
+                                            <p class="customer-comment">
+                                                <span class="comma">"</span>                                                
+                                                L&#224; một kh&#225;ch h&#224;ng th&#226;n thiết khi đ&#227; trải qua nhiều năm sử dụng dịch vụ của Vietravel nhưng thật sự ch&#250;ng t&#244;i lu&#244;n bất ngờ v&#236; chất lượng dịch vụ của c&#225;c bạn mang lại. Tr&#234;n tất cả c&#225;c phương diện c&#225;c bạn đ&#227; cố gắng ho&#224;n th&#224;nh tốt nhất, chu đ&#225;o nhất đem lại sự h&#224;i l&#242;ng cho c&#244;ng nh&#226;n vi&#234;n c&#244;ng ty ch&#250;ng t&#244;i.
+                                                <span class="comma">"</span>
+                                            </p>
+                                            <p><span>------------------ # ------------------</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item ">
+                                    <div class="frame-customer">
+                                        <div class="text-center">
+                                            <p class="customer-name m-color"><a href="https://vietravelmice.com:443/tin-tuc/245-thu-cam-on-cua-chi-nguyen-thi-thu-hang--eximbank-tru-so-chinh">THƯ C&#193;M ƠN CỦA CHỊ NGUYỄN THỊ THU HẰNG - EXIMBANK TRỤ SỞ CH&#205;NH</a></p>
+                                            <p class="mg-bot15"><span>------------------ # ------------------</span></p>
+                                            <p class="customer-comment">
+                                                <span class="comma">"</span>                                                
+                                                Cảm ơn em v&#224; c&#244;ng ty Vietravel đ&#227; set cho cơ quan chị 1 kỳ nghỉ thật vui vẻ, mặc d&#249; thời tiết Đ&#224; Nẵng nắng n&#243;ng nhưng Đo&#224;n chị đ&#227; c&#243; những trải nghiệm tuyệt vời từ kh&#225;ch sạn, nh&#224; h&#224;ng, chương tr&#236;nh tour đều rất okie, nhất l&#224; bạn Ho&#224;ng Hu&#226;n đ&#227; rất nhiệt t&#236;nh trong suốt khoảng thời gian 3 ng&#224;y đi c&#249;ng Đo&#224;n
+                                                <span class="comma">"</span>
+                                            </p>
+                                            <p><span>------------------ # ------------------</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="m-kinhnghiem" >
+        <div id="experience" class="carousel slide pos-relative" data-ride="carousel" data-type="multi" data-interval="false">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                    <div class="item active">
+                        <!-- kích thước video 1920x748 -->
+                        <img src="https://vietravelmice.com/FileUploads/Banners/img_310520230922c7e5-43b8-431b-9263-dd6e2162de44.JPG" alt="" class="img-responsive img-kndl" style="width: 100%;"/>
+                        <div class="frame-experience">
+                            <h3 class="mg-bot15"><span class="m-color uppercase bold">Du lịch kh&#225;ch đo&#224;n đến Bali</span> - </h3>
+                            <div class="frame-experience-descript dot-dot home-cut-descipt">
+                                Tour du lịch kh&aacute;ch đo&agrave;n tham quan đền Lempuyang Luhur, cung điện nước Tirta Gangga, Batuan, Tanah Lot, đền Uluwatu... kết hợp tổ chức gala dinner&nbsp;
+                            </div>
+                            <a href="https://www.facebook.com/micedepartment/posts/pfbid02yW1TsJ2gWGetdvse7PmpRsspC6w7uHAtznHakYJPrEWGrew3BfVxkbMznKYpcDDbl" class="m-color">Xem chi tiết&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#experience" data-slide="prev">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#experience" data-slide="next">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 mg-bot30">
+                <p class="uppercase bold m-color mg-bot10">Thông tin liên hệ</p>
+                <p class="mg-bot5">Địa chỉ: 190 Pasteur, P. Võ Thị Sáu, Q.3, Tp. Hồ Chí Minh, Việt Nam</p>
+                <p class="mg-bot5">Email : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2bfbbb1b792a4bbb7a6a0b3a4b7befcb1bdbf">[email&#160;protected]</a></p>
+                <p>Điện thoại: (+84 28) 38 66 8999 - Ext: 393   -    Fax : (+84 28) 3829 9142</p>
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 mg-bot20">
+                    <ul class="footer-menu">
+                            <li><a href="https://vietravelmice.com:443/gioi-thieu">Giới thiệu</a></li>
+                            <li><a href="https://vietravelmice.com:443/menu-tin/1-tin-tuc">Tin tức</a></li>
+                            <li><a href="https://vietravelmice.com:443/lien-he">Li&#234;n hệ</a></li>
+                    </ul>
+                <div class="connect-us">
+                    <div class="f-left">Kết nối với chúng tôi</div>
+                    <div class="f-left"><a href="https://www.facebook.com/micedepartment/"  target="_blank"><img src="https://vietravelmice.com:443/Content/mice2018/img/fb.png" /></a></div>
+                    <div class="f-left"><a href="https://zalo.me/0938301393"  target="_blank"><img src="https://vietravelmice.com:443/Content/mice2018/img/zl.png" /></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="copyright">
+    VIETRAVEL ® Copyright 2016. All rights reserved.
+</div>
+
+
+    <div class="divLoading"></div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js?v=04102018" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Content/mice2018/js/jquery.dotdotdot.js?v=04102018" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Content/mice2018/js/bootstrap.min.js?v=04102018" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Content/mice2018/js/script.js?v=04102018" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Content/mice2018/js/hoverIntent.js?v=04102018" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Content/mice2018/sweetalert/sweetalert.min.js?v=04102018" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="https://vietravelmice.com:443/Scripts/jquery.validate.min.js?v=04102018"></script>
+    <script src="https://vietravelmice.com:443/Scripts/jquery.validate.unobtrusive.min.js?v=04102018"></script>
+
+
+    <a href="tel:+84938301393" rel="nofollow"> <div class="alo-phone alo-green alo-show"> <div class="alo-ph-circle"></div> <div class="alo-ph-circle-fill"></div> <div class="alo-ph-img-circle"></div> </div></a>
+
+    <script>
+        function changeLanguage(a) {
+            return $.ajax({
+                url: "https://vietravelmice.com:443/Home/ChangeLanguage", data: { LanguageName: a },
+                success: function (a) { window.location.href = a }
+            }), !0
+        }
+        $(document).ready(function () {
+            var date_input = $('input[name="date"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        });
+    </script>
+
+    <script>
+        $("#btGui").click(function () {
+            form = $("#lienheForm");
+            form.removeData('validator');
+            form.removeData('unobtrusiveValidation');
+            $.validator.unobtrusive.parse("#lienheForm");
+            if (form.valid()) {
+
+                var formdata = new FormData(); //FormData object
+
+                formdata.append("HoTen", $("#HoTen").val());
+                formdata.append("Email", $("#Email").val());
+                formdata.append("Phone", $("#Phone").val());
+                formdata.append("Address", $("#Address").val());
+                formdata.append("Note", $("#Note").val());
+
+
+                //send log fix bug /27/02/2024
+                // Get the current path
+                var currentPath = window.location.pathname;
+                // Parse FormData to JSON
+                var formDataJSON = {};
+                formdata.forEach(function (value, key) {
+                    formDataJSON[key] = value;
+                });
+                // Convert FormData JSON to string
+                var formDataString = JSON.stringify(formDataJSON);
+                // Combine current path and FormData string
+                var combinedString = "Current Path: " + currentPath + "\n" + "FormData as JSON: " + formDataString;
+                formdata.append("Request", combinedString);
+                //send log fix bug /27/02/2024
+
+
+
+
+                if ($("#NewId").val() != undefined) {
+                    formdata.append("NewId", $("#NewId").val());
+                }
+                if ($("#StaticPageId").val() != undefined) {
+                    formdata.append("StaticPageId", $("#StaticPageId").val());
+                }
+                if ($("#NewMediaId").val() != undefined) {
+                    formdata.append("NewMediaId", $("#NewMediaId").val());
+                }
+                $.ajax({
+                    url: 'https://vietravelmice.com:443/LienHe/Gui',
+                    type: "POST",
+                    data: formdata,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function (xhr) {
+                        $(".divLoading").addClass("loading");
+                    },
+                    success: function (result) {
+                        if (result.status >= 1) {
+                            swal({
+                                title: "",
+                                text: "Cám ơn quí khách đã liên hệ với chúng tôi",
+                                type: "success",
+                                animation: false
+                            });
+
+                            $("#HoTen").val('');
+                            $("#Email").val('');
+                            $("#Phone").val('');
+                            $("#Address").val('');
+                            $("#Note").val('');
+                        }
+                        else {
+                            swal({
+                                title: "",
+                                text: "Gửi liên hệ không thành công. Quí khách vui lòng thử lại",
+                                type: "error",
+                                animation: false
+                            });
+                        }
+                        $(".divLoading").removeClass("loading");
+                    },
+                    failure: function (message) {
+                        $(".divLoading").removeClass("loading");
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function Search() {
+            var key = $("#SearchDesktop").val();
+            if (key == '') {
+
+            } else {
+                window.location.href = 'https://vietravelmice.com:443/Search/' + key;
+            }
+        }
+
+        function Like(Id) {
+            $.ajax({
+                url: 'https://vietravelmice.com:443/LienHe/Like',
+                type: "POST",
+                data: { Id: Id },
+                beforeSend: function (xhr) {
+                },
+                success: function (result) {
+                    if (result.status >= 1) {
+                        $("#New_Like_" + Id).html(result.obj);
+                    }
+                    else {
+
+                    }
+                },
+                failure: function (message) {
+                }
+            });
+        }
+
+           function LikeVideo(Id) {
+
+            $.ajax({
+                url: 'https://vietravelmice.com:443/Media/Like',
+                type: "POST",
+                data: { Id: Id },
+                beforeSend: function (xhr) {
+                },
+                success: function (result) {
+                    if (result.status >= 1) {
+                        $("#New_Like_" + Id).html(result.obj);
+                    }
+                    else {
+
+                    }
+                },
+                failure: function (message) {
+                }
+            });
+        }
+    </script>
+
+    
+    
+    <script>
+
+         $.ajax({
+            url: '/Home/_Video',
+            timeout: 20000,
+             beforeSend: function (xhr) {
+
+            },
+             success: function (result) {
+                $('#video').html(result);
+            },
+             failure: function (message) {
+
+
+            }
+         });
+
+      function SelectVideo(id) {
+        $.ajax({
+            url: '/Home/_Video',
+            timeout: 20000,
+            data: {
+                mediaId: id
+            },
+            beforeSend: function (xhr) {
+
+            },
+            success: function (result) {
+
+                $('#video').html(result);
+            },
+            failure: function (message) {
+
+            }
+        });
+        }
+
+        function SelectTypeVideo(id) {
+        $.ajax({
+            url: '/Home/_Video',
+            timeout: 20000,
+            data: {
+                mediaTypeId: id
+            },
+            beforeSend: function (xhr) {
+
+            },
+            success: function (result) {
+
+                $('#video').html(result);
+            },
+            failure: function (message) {
+
+            }
+        });
+       }
+    </script>
+    
+
+    <div class="fb-customerchat" page_id="145276576224678" theme_color="#0084FF" logged_in_greeting="" logged_out_greeting=""></div>
+</body>
+</html>
