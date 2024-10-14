@@ -1,0 +1,649 @@
+<html>
+ <head>
+  <title>
+   Vietravel MICE
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header img {
+            height: 50px;
+        }
+        .navbar {
+            background-color: #d9534f;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #c9302c;
+        }
+        .navbar .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .navbar .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .search-container {
+            float: right;
+            padding: 14px 16px;
+        }
+        .search-container input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #ccc;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            text-align: center;
+            color: #333;
+        }
+        .content .section {
+            margin-bottom: 40px;
+        }
+        .content .section h3 {
+            color: #d9534f;
+            border-bottom: 1px dashed #d9534f;
+            padding-bottom: 10px;
+        }
+        .content .section .item {
+            margin-bottom: 20px;
+        }
+        .content .section .item i {
+            margin-right: 10px;
+        }
+        .content .section .item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .content .section .item .text {
+            display: inline-block;
+            vertical-align: top;
+            max-width: calc(100% - 120px);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content .left {
+            width: 65%;
+        }
+        .main-content .right {
+            width: 30%;
+        }
+        .video-section {
+            margin-bottom: 20px;
+        }
+        .video-section h2 {
+            font-size: 18px;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        .video-section .video-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .video-section .video-title a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .video-section .video-title a:hover {
+            text-decoration: underline;
+        }
+        .video-section .video-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .video-section .video-meta i {
+            margin-right: 5px;
+        }
+        .video-section .video-description {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .video-section .video-description .highlight {
+            color: #d9534f;
+        }
+        .related-videos {
+            margin-bottom: 20px;
+        }
+        .related-videos h2 {
+            font-size: 18px;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        .related-videos .video-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .related-videos .video-item img {
+            width: 80px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        .related-videos .video-item .video-info {
+            font-size: 14px;
+            color: #333;
+        }
+        .related-videos .video-item .video-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .related-videos .video-item .video-info a:hover {
+            text-decoration: underline;
+        }
+        .related-videos .video-item .video-meta {
+            font-size: 12px;
+            color: #999;
+        }
+        .related-videos .more-videos {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .related-videos .more-videos a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .related-videos .more-videos a:hover {
+            background-color: #c9302c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .footer .contact-info {
+            font-size: 12px;
+            color: #999;
+        }
+        .footer .social-links {
+            margin-top: 10px;
+        }
+        .footer .social-links a {
+            margin: 0 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer .social-links a:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img src="viettravel" height="50" width="200"/>
+  </div>
+  <div class="navbar">
+   <a href="#">
+    <i class="fas fa-home">
+    </i>
+   </a>
+   <div class="dropdown">
+    <button class="dropbtn">
+     GIỚI THIỆU
+     <i class="fa fa-caret-down">
+     </i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#">
+      Giới thiệu chung
+     </a>
+     <a href="#">
+      Lý do nên chọn Vietravel Mice
+     </a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn">
+     TOUR TRỌN GÓI
+     <i class="fa fa-caret-down">
+     </i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#">
+      Du lịch biển
+     </a>
+     <a href="#">
+      Du lịch cao cấp
+     </a>
+     <a href="#">
+      Du lịch hành hương 
+     </a>
+     <a href="#">
+      Du lịch khám phá
+     </a>
+     <a href="#">
+      Du lịch sự kiện
+     </a>
+     <a href="#">
+      Du lịch theo mùa hoa 
+     </a>
+     <a href="#">
+      Du lịch thăm thân
+     </a>
+     <a href="#">
+      Du lịch xuyên Việt
+     </a>
+     <a href="#">
+      Du thuyền 
+     </a>
+     <a href="#">
+      Sản phẩm thu đông 
+     </a>
+     <a href="#">
+      Tour dành riêng cho HS-SV
+     </a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn">
+     DỊCH VỤ DU LỊCH
+     <i class="fa fa-caret-down">
+     </i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#">
+      Coupon
+     </a>
+     <a href="#">
+      Vé máy bay
+     </a>
+     <a href="#">
+      Thuê xe
+     </a>
+     <a href="#">
+      Dịch vụ VISA
+     </a>
+     <a href="#">
+      Gói dịch vụ -Combo
+     </a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn">
+     ĐIỂM ĐẾN HẤP DẪN
+     <i class="fa fa-caret-down">
+     </i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#">
+      Lễ hội
+     </a>
+     <a href="#">
+      Trải nghiệm theo mùa
+     </a>
+     <a href="#">
+      Media
+     </a>
+    </div>
+   </div>
+   <div class="dropdown">
+    <button class="dropbtn">
+     TIN TỨC
+     <i class="fa fa-caret-down">
+     </i>
+    </button>
+    <div class="dropdown-content">
+     <a href="#">
+      Nhật kí hành trình
+     </a>
+     <a href="#">
+      Sự kiện
+     </a>
+     <a href="#">
+      Khuyến mãi
+     </a>
+    </div>
+   </div>
+   <a href="#">
+    Ý KIẾN KHÁCH HÀNG
+   </a>
+   <a href="#">
+    LIÊN HỆ
+   </a>
+   <div class="search-container">
+    <input placeholder="Nhập thông tin cần tìm" type="text"/>
+    <button type="submit">
+     <i class="fa fa-search">
+     </i>
+    </button>
+   </div>
+  </div>
+  <div class="content">
+   <div class="section">
+    <h2>
+     NHẬT KÝ HÀNH TRÌNH
+    </h2>
+    <div class="item">
+     <img alt="Image 1" height="100" src="https://storage.googleapis.com/a1aa/image/uFXWRN2WxWrPGpFZRQ9s2dwe1uP2s8iB0FUX9hH2iVAzmWzJA.jpg" width="100"/>
+     <div class="text">
+      Dành mùa hè này để trải nghiệm Đài Loan vui hết sảy
+     </div>
+    </div>
+    <div class="item">
+     <div class="text">
+      Mỹ đón tìm du khách ngay lần đầu đặt chân đến
+     </div>
+    </div>
+    <div class="item">
+     <img alt="Image 2" height="100" src="https://storage.googleapis.com/a1aa/image/mip6f5pvOlyiSibcD0a3vyyr9MNbdO6axWOjTPepQxWnNtmTA.jpg" width="100"/>
+     <div class="text">
+      Hè rực rỡ với tour du lịch đáng mong chờ dành cho doanh nghiệp
+     </div>
+    </div>
+    <div class="item">
+     <div class="text">
+      Những điểm đến cực hấp dẫn cùng Tour du lịch doanh nghiệp đến Mỹ
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <h3>
+     SỰ KIỆN
+    </h3>
+    <div class="item">
+     <i class="fa fa-calendar-alt">
+     </i>
+     <div class="text">
+      Vietravel tư vấn trực tiếp tổ chức tour du lịch hè cho các doanh nghiệp - 11/06/2024
+     </div>
+    </div>
+    <div class="item">
+     <i class="fa fa-calendar-alt">
+     </i>
+     <div class="text">
+      VIETRAVEL TỔ CHỨC KỲ THI XẾP HẠNG SAO NHÂN VIÊN - 24/11/2023
+     </div>
+    </div>
+    <div class="item">
+     <i class="fa fa-calendar-alt">
+     </i>
+     <div class="text">
+      VIETRAVEL TỔ CHỨC ĐOÀN ĐẾN THÁI LAN “TIẾP LỬA” ĐỘI NGŨ - 24/11/2023
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <h3>
+     ĐIỂM ĐẾN HẤP DẪN
+    </h3>
+    <div class="item">
+     <div class="text">
+      Bay thẳng Đài Loan - Tour trọn gói chỉ từ 12,9 triệu đồng
+     </div>
+    </div>
+    <div class="item">
+     <img alt="Image 3" height="100" src="https://storage.googleapis.com/a1aa/image/eGlXjNbmJfmIepugYTMgFLAIUfc69UJooOJIEC2E92Vg20aOB.jpg" width="100"/>
+     <div class="text">
+      Tour Triển lãm &amp; Hội nghị Gastech Houston 2024
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="header">
+    <h1>
+     MEDIA
+    </h1>
+   </div>
+   <div class="main-content">
+    <div class="left">
+     <div class="video-section">
+      <h2>
+       Video
+      </h2>
+      <div class="video-title">
+       <a href="#">
+        KỲ NGHỈ TUYỆT ĐẸP CHO KHÁCH ĐOÀN BÊN VỊNH HẠ LONG
+       </a>
+      </div>
+      <div class="video-meta">
+       <i class="fas fa-calendar-alt">
+       </i>
+       13/10/2021
+       <i class="fas fa-eye">
+       </i>
+       56780 lượt xem
+       <i class="fas fa-comments">
+       </i>
+       2
+      </div>
+      <div class="video-description">
+       <p>
+        Đoàn 200 khách Công ty cổ phần Thuận Hải đã cùng Vietravel có một kỳ nghỉ vô cùng tuyệt vời tại Vịnh Hạ Long xinh đẹp. Chạy hết mình cùng các hoạt động team building vui nhộn bên bờ biển nguyên sơ đầy cuốn hút tại Vinpearl Hạ Long. Đây là dịp để toàn bộ nhân viên của khách hàng kết nối, tiếp thêm sức mạnh, "Chung một hướng - vững một niềm tin" cho những dự định phát triển trong tương lai.
+        <span class="highlight">
+         Cùng nhau thưởng ngoạn cảnh đẹp thiên nhiên kỳ thú, vịnh Hạ Long trên du thuyền Princess 5 sao, cùng vui đùa với các hoạt động thể thao dưới nước, nghỉ đêm trong kỳ nghỉ dưỡng đẳng cấp.
+        </span>
+        Đêm gala âm nhạc sôi động, ý nghĩa cũng những trò chơi teambuilding vui nhộn nhưng không kém phần hấp dẫn, đã mang đến cho quý khách những trải nghiệm khó quên. Đặc biệt là phần thi "vũ điệu xanh" là những cảm hứng cho các bạn lan tỏa đến cộng đồng hành động góp ích cho doanh nghiệp qua nhiều giai đoạn hình thành và phát triển
+        <i class="fas fa-heart">
+        </i>
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="right">
+     <div class="related-videos">
+      <h2>
+       Video liên quan
+      </h2>
+      <div class="video-item">
+       <img alt="Hòa mình vào thiên nhiên xanh với tour du lịch trekking rừng Phước Bửu" height="60" src="https://storage.googleapis.com/a1aa/image/zveu98Edc1WdDqTTkzTfACs89KoYlwRKfDUixUnxMuh9pbNnA.jpg" width="80"/>
+       <div class="video-info">
+        <a href="#">
+         Hòa mình vào thiên nhiên xanh với tour du lịch trekking rừng Phước Bửu
+        </a>
+        <div class="video-meta">
+         <i class="fas fa-eye">
+         </i>
+         3632 lượt xem
+         <i class="fas fa-comments">
+         </i>
+         28
+        </div>
+       </div>
+      </div>
+      <div class="video-item">
+       <img alt="Kỷ niệm 15 năm đồng hành cùng kỳ nghỉ tại Phan Thiết" height="60" src="https://storage.googleapis.com/a1aa/image/eirhNRYc9FV2OSX4nTQUyLR2iQIjYQTRWSkx2cHbmaIe0tmTA.jpg" width="80"/>
+       <div class="video-info">
+        <a href="#">
+         Kỷ niệm 15 năm đồng hành cùng kỳ nghỉ tại Phan Thiết
+        </a>
+        <div class="video-meta">
+         <i class="fas fa-eye">
+         </i>
+         6511 lượt xem
+         <i class="fas fa-comments">
+         </i>
+         8
+        </div>
+       </div>
+      </div>
+      <div class="video-item">
+       <img alt="Vietravel đồng hành cùng các doanh nghiệp tổ chức hội nghị tại Vinpearl Hạ Long" height="60" src="https://storage.googleapis.com/a1aa/image/t4jFiIv1SAYiE9QBqHhAeL3vkeC3Ca6ZePGCzJ1e5fhDou1cC.jpg" width="80"/>
+       <div class="video-info">
+        <a href="#">
+         Vietravel đồng hành cùng các doanh nghiệp tổ chức hội nghị tại Vinpearl Hạ Long
+        </a>
+        <div class="video-meta">
+         <i class="fas fa-eye">
+         </i>
+         678 lượt xem
+         <i class="fas fa-comments">
+         </i>
+         32
+        </div>
+       </div>
+      </div>
+      <div class="video-item">
+       <img alt="Du lịch tương thương - hành trình khám phá 'viên ngọc' Phú Quốc giữa lòng đại dương" height="60" src="https://storage.googleapis.com/a1aa/image/DKXEa4ch4YbnBJUDcpZhIWOCx0CkdbY3ZwlcFlunVbfe0tmTA.jpg" width="80"/>
+       <div class="video-info">
+        <a href="#">
+         Du lịch tương thương - hành trình khám phá 'viên ngọc' Phú Quốc giữa lòng đại dương
+        </a>
+        <div class="video-meta">
+         <i class="fas fa-eye">
+         </i>
+         9142 lượt xem
+         <i class="fas fa-comments">
+         </i>
+         12
+        </div>
+       </div>
+      </div>
+      <div class="more-videos">
+       <a href="#">
+        Xem thêm những video khác
+        <i class="fas fa-arrow-right">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <p>
+     THƯ CẢM ƠN CỦA CÔNG TY CỔ PHẦN BAO BÌ NHỰA TÂN TIẾN
+    </p>
+    <p>
+     "Là một khách hàng thân thiết đã trải qua nhiều năm sử dụng dịch vụ của Vietravel nhưng tôi vẫn luôn bất ngờ vì chất lượng dịch vụ của các bạn mang lại. Trên tất cả các phương diện đến các bạn đã cố gắng hoàn thành tốt nhất, cho chúng tôi sự hài lòng cho chuyến hành trình của công ty chúng tôi."
+    </p>
+    <div class="contact-info">
+     <p>
+      Địa chỉ: 190 Pasteur, P. Võ Thị Sáu, Q.3, Tp. Hồ Chí Minh, Việt Nam
+     </p>
+     <p>
+      Email:
+      <a href="mailto:mice@vietravel.com">
+       mice@vietravel.com
+      </a>
+     </p>
+     <p>
+      Điện thoại: (84 28) 38 66 8999 - Ext: 393 - Fax: (84 28) 38 29 9142
+     </p>
+    </div>
+    <div class="social-links">
+     <a href="#">
+      GIỚI THIỆU
+     </a>
+     |
+     <a href="#">
+      TIN TỨC
+     </a>
+     |
+     <a href="#">
+      LIÊN HỆ
+     </a>
+     <div>
+      <a href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
